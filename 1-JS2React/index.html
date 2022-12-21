@@ -20,12 +20,14 @@
     <script type="text/jsx">
       const app = document.getElementById("app");
 
-      function Header (){
-       return (<h1>MY MINIMAL REACT APPLICATION WITH JSX 🔥🔥</h1>)
+      const title = "React ❤️"
+
+      function Header ({emoji}){
+       return (<h1>MY MINIMAL {title} APPLICATION WITH JSX {emoji}</h1>)
       }
 
-      function Layout ({children}){
-       return (<>{children}</>)
+      function Layout (){
+       return (<Header emoji="🔥🔥"/>)
       }
 
       ReactDOM.render(<Layout><Header/></Layout>, app);
