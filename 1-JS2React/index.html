@@ -20,7 +20,15 @@
     <script type="text/jsx">
       const app = document.getElementById("app");
 
-      ReactDOM.render(<h1>MY MINIMAL REACT APPLICATION WITH JSX 🔥🔥</h1>, app);
+      function Header (){
+       return (<h1>MY MINIMAL REACT APPLICATION WITH JSX 🔥🔥</h1>)
+      }
+
+      function Layout ({children}){
+       return (<>{children}</>)
+      }
+
+      ReactDOM.render(<Layout><Header/></Layout>, app);
     </script>
   </body>
 </html>
